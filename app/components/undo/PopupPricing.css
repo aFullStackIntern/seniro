@@ -1,0 +1,113 @@
+/* PhoneNumberInput.css */
+
+/* Increase the width of the phone input */
+.react-tel-input {
+  width: 480px;
+  height: 58px;
+}
+
+/* Customize the border color */
+.react-tel-input input[type="tel"] {
+  border: 1px solid #AAAAAA; /* Change to your desired border color */
+   width: 480px;
+  height: 58px;
+  font-size: 20px;
+  padding-left: 15%;
+  border-radius: 0;
+}
+
+/* Customize the styles of the country dropdown */
+.react-tel-input .flag-dropdown {
+  /* Add your custom styles here */
+}
+.react-tel-input .selected-flag {
+    width: 58px;
+}
+
+/* //// raect playerasd */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .Player{
+    height: 437px;
+    
+  }
+
+}
+
+/* Add these styles to your Modal.css */
+
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Background blur effect */
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0; /* Updated to center vertically */
+  left: 0; /* Updated to center horizontally */
+  z-index: 4;
+  backdrop-filter: blur(8px); 
+}
+
+.modalContainer {
+  width: 1000px;
+  height: fit-content;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+/* ... (your existing styles) */
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  .modalContainer {
+   width: 250px;
+  padding: 15px;
+
+  }
+}
+
+
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modalContainer .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}

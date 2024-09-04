@@ -1,0 +1,70 @@
+/* App.css */
+.react-multi-carousel-track{
+  padding-bottom: 36px;
+}
+.react-multi-carousel-item {
+  padding-bottom: 36px;
+
+}
+.sidebar {
+  top: 0;
+  height: fit-content;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.sidebar li.active {
+  /* background-color: #ccc; */
+  color: red;
+}
+
+.item {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .Image-size {
+    /* height: 94px;
+width: 94px; */
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1440px) {
+  .Image-size {
+    height: 110px;
+    width: 130px;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .Image-size2 {
+    height: 95px;
+    width: 173px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1440px) {
+  .Image-size2 {
+    height: 110px;
+    width: 220px;
+  }
+}
+.hii {
+  display: flex;
+  gap: 10px;
+}
+
+/* ///////React player */
+.ytp-large-play-button{
+  width: 0px;
+}
