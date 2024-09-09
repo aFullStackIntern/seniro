@@ -27,7 +27,7 @@
 //    const fetchBlogs = async () => {
 //      try {
 //        const { data } = await axios.get(
-//          "http://api.saniiro.net/api/v1/blog"
+//          "http://dev.saniiro.net/api/v1/blog"
 //        );
 //        setTags(data.Data.Tags);
 //        setBlogs(data.Data.Blogs);
@@ -111,7 +111,7 @@ const BlogFeed = () => {
     try {
       const tagIds = activeTags.join(","); // Join the activeTags array to create a comma-separated string
 
-      const { data } = await axios.get("http://api.saniiro.net/api/v1/blog", {
+      const { data } = await axios.get("http://dev.saniiro.net/api/v1/blog", {
         params: {
           SearchTerm: searchPosts,
           TagIds: tagIds, // Send the tag IDs as a query parameter

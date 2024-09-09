@@ -32,7 +32,7 @@ const VideoFeedSection = () => {
   }, []);
 
   const handleCategoryClick = async (category, Id) => {
-    const url = "http://api.saniiro.net/api/v1/videos";
+    const url = "http://dev.saniiro.net/api/v1/videos";
     const { data } = await axios.get(url, {
       params: {
         classificationId: Id,
@@ -142,7 +142,7 @@ const VideoFeedSection = () => {
                   <Link
                     onClick={handleClick}
                     key={video.Id}
-                    href={`/Resources/videos/${video.Slug}`}
+                    href={`/Resources/Videos/${video.Slug}`}
                     style={{ textDecoration: "none" }}
                   >
                     <VideoCard

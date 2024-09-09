@@ -59,7 +59,7 @@
 // export default CheckoutPage;
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import {
   Box,
   Typography,
@@ -75,9 +75,9 @@ import Footer from "../utils/Footer";
 import Nav from "../Navbar/Nav";
 import PopupPricing from "./PopupPricing";
 const CheckoutPage = () => {
-  const router = useRouter();
-  const { id } = router.query;
-  const { pathname } = useRouter();
+  const params = useParams();
+  const id = params.id;
+  const pathname = usePathname();
   const price = pathname.state?.price || 0;
   const [popupVisible, setPopupVisible] = useState(false);
 

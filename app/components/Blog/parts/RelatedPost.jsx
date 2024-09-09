@@ -14,7 +14,7 @@
 //       paddingBottom={"20px"}
 //     >
 //       <Stack direction={"column"} gap={3}>
-        
+
 //       </Stack>
 //     </Stack>
 //   );
@@ -32,7 +32,7 @@ const RelatedPost = () => {
     const fetchReplies = async () => {
       try {
         const response = await axios.get(
-          "http://api.saniiro.net/api/v1/feedback/reply"
+          "http://dev.saniiro.net/api/v1/feedback/reply"
         );
         if (response.data.Status === 1000) {
           setReplies(response.data.Data);

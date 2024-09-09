@@ -995,7 +995,7 @@
 
 //     try {
 //       const response = await axios.post(
-//         "http://api.saniiro.net/api/v1/pricing/purchase",
+//         "http://dev.saniiro.net/api/v1/pricing/purchase",
 //         payload,
 //         {
 //           headers: {
@@ -1672,7 +1672,7 @@ const PopupPricing = () => {
 
     try {
       const response = await axios.post(
-        "http://api.saniiro.net/api/v1/pricing/purchase",
+        "http://dev.saniiro.net/api/v1/pricing/purchase",
         payload,
         {
           headers: {

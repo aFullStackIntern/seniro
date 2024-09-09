@@ -30,19 +30,19 @@ import FeqBodyTop from "./parts/FeqBodytop";
 import Footer from "../utils/Footer";
 import { Stack } from "@mui/material";
 import axios from "axios";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import FaqRecentContent from "./RecentParts/FaqRecentContent";
 
 const FaqRecentActivities = () => {
-  const router = useRouter();
-  const { slug } = router.query; // Retrieve the slug from the URL
+  const params = useParams();
+  const slug = params.slug; // Retrieve the slug from the URL
   const [faqData, setFaqData] = useState(null);
 
   useEffect(() => {
     const fetchFaqData = async () => {
       try {
         const response = await axios.get(
-          `http://api.saniiro.net/api/v1/faq/${slug}`
+          `http://dev.saniiro.net/api/v1/faq/${slug}`
         );
         setFaqData(response.data.Data);
       } catch (error) {

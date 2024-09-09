@@ -11,7 +11,7 @@ import axios from "axios";
 import Image from "next/image";
 const fetchFAQs = async () => {
   try {
-    const response = await axios.get("http://api.saniiro.net/api/v1/faq");
+    const response = await axios.get("http://dev.saniiro.net/api/v1/faq");
     const faqs = response.data.Data.FrequentAskQuestions;
     const popularPosts = response.data.Data.PopularFaqs;
     const RecentFaqs = response.data.Data.RecentFaqs;
@@ -35,7 +35,7 @@ const categorizeFAQs = (faqs) => {
 };
 
 const ActivityManagement = () => {
-  const routert = useRouter();
+  const router = useRouter();
   const [faqsByCategory, setFaqsByCategory] = useState({});
   const [activities, setActivities] = useState([]);
   const [Popularposts, setPopularposts] = useState([]);
@@ -173,6 +173,7 @@ const ActivityManagement = () => {
                     lineHeight: "24px",
                     letterSpacing: "-0.02em",
                     textAlign: "left",
+                    cursor: "pointer",
                   }}
                 >
                   {post.Question.length > 50
@@ -214,6 +215,7 @@ const ActivityManagement = () => {
                     lineHeight: "24px",
                     letterSpacing: "-0.02em",
                     textAlign: "left",
+                    cursor: "pointer",
                   }}
                 >
                   {post.Question.length > 50

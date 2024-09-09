@@ -437,25 +437,25 @@ import axios from "axios";
 const PriceCardSection = ({ plan }) => {
   const [featuresInfo, setFeaturesInfo] = useState();
   const [activeCard, setActiveCard] = useState("ENTERPRISE");
-const [subscriptionPlans, setSubscriptionPlans] = useState([]);
+  const [subscriptionPlans, setSubscriptionPlans] = useState([]);
 
-useEffect(() => {
-  const fetchSubscriptionPlans = async () => {
-    try {
-      const response = await axios.get(
-        "http://api.saniiro.net/api/v1/pricing"
-      );
-      // Assuming the API returns the subscription plans array directly
-      setSubscriptionPlans(response.data.Data.Packages);
-      // You might need to adjust this depending on the structure of your API response
-    } catch (error) {
-      console.error("Error fetching subscription plans:", error);
-    }
-  };
+  useEffect(() => {
+    const fetchSubscriptionPlans = async () => {
+      try {
+        const response = await axios.get(
+          "http://dev.saniiro.net/api/v1/pricing"
+        );
+        // Assuming the API returns the subscription plans array directly
+        setSubscriptionPlans(response.data.Data.Packages);
+        // You might need to adjust this depending on the structure of your API response
+      } catch (error) {
+        console.error("Error fetching subscription plans:", error);
+      }
+    };
 
-  fetchSubscriptionPlans();
-}, []);
-         console.log("subscriptionPlans", subscriptionPlans);
+    fetchSubscriptionPlans();
+  }, []);
+  console.log("subscriptionPlans", subscriptionPlans);
 
   const handleClick = (feature) => {
     setFeaturesInfo(feature);

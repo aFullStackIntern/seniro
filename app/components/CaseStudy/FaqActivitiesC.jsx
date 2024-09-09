@@ -4,20 +4,20 @@ import FeqBodyTop from "./parts/FeqBodytop";
 import FeqBodyContent from "./parts/FaqBodyContent";
 import Footer from "../utils/Footer";
 import { Stack } from "@mui/material";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const FaqActivitiesC = () => {
-  const router = useRouter();
-  const { slug } = router.query;
+  const params = useParams();
+  const slug = params.slug;
   const [csData, setcsData] = useState(null);
 
   useEffect(() => {
     const fetchFaqData = async () => {
       try {
         const response = await axios.get(
-          `http://api.saniiro.net/api/v1/case-study/${slug}`
+          `http://dev.saniiro.net/api/v1/case-study/${slug}`
         );
         setcsData(response.data.Data);
       } catch (error) {

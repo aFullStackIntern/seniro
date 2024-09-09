@@ -16,6 +16,8 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import { RxCross2 } from "react-icons/rx";
 import { CgMenuRight } from "react-icons/cg";
 import Image from "next/image";
+import style from "./navlight.css";
+
 const NavLight = () => {
   const [popoverState, setPopoverState] = useState({});
   const [subLinks, setSubLinks] = useState(false);

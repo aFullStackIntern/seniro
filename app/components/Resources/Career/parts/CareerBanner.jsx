@@ -297,7 +297,7 @@
 //     const fetchData = async () => {
 //       try {
 //         const response = await axios.get(
-//           "http://api.saniiro.net/api/v1/career/departments-and-countries"
+//           "http://dev.saniiro.net/api/v1/career/departments-and-countries"
 //         );
 //         const data = response.data.Data;
 //         setDepartmentsData(data.AllDepartment);
@@ -586,7 +586,7 @@ const CareerBanner = ({ onDepartmentChange, handleACountryChange }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://api.saniiro.net/api/v1/career/departments-and-countries"
+          "http://dev.saniiro.net/api/v1/career/departments-and-countries"
         );
         const data = response.data.Data;
         setDepartmentsData(data.AllDepartment);

@@ -94,7 +94,7 @@ const ContactUs = () => {
     // }
     try {
       const response = await axios.post(
-        "http://api.saniiro.net/api/v1/request/contact",
+        "http://dev.saniiro.net/api/v1/request/contact",
         formData
       );
       if (response.data.Code === 1000) {

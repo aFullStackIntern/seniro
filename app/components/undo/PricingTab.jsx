@@ -14,7 +14,7 @@
 //     const fetchSubscriptionPlans = async () => {
 //       try {
 //         const response = await axios.get(
-//           "http://api.saniiro.net/api/v1/price-comparison"
+//           "http://dev.saniiro.net/api/v1/price-comparison"
 //         );
 //         // Assuming the API returns the subscription plans array directly
 //         setSubscriptionPlans(response.data.Data);
@@ -115,7 +115,7 @@
 //     const fetchSubscriptionPlans = async () => {
 //       try {
 //         const response = await axios.get(
-//           "http://api.saniiro.net/api/v1/price-comparison"
+//           "http://dev.saniiro.net/api/v1/price-comparison"
 //         );
 //         const plans = response.data.Data;
 //         setSubscriptionPlans(plans);
@@ -203,7 +203,6 @@
 
 // export default PricingTab;
 
-
 // import React, { useEffect, useState } from "react";
 // import { Box, Typography, Stack } from "@mui/material";
 // import PriceCardSection from "./PriceCardSection";
@@ -230,7 +229,7 @@
 //     const fetchSubscriptionPlans = async () => {
 //       try {
 //         const response = await axios.get(
-//           "http://api.saniiro.net/api/v1/price-comparison"
+//           "http://dev.saniiro.net/api/v1/price-comparison"
 //         );
 //         const plans = response.data.Data;
 //         setSubscriptionPlans(plans);
@@ -324,8 +323,6 @@
 
 // export default PricingTab;
 
-
-
 import React, { useEffect, useState } from "react";
 import { Box, Typography, Stack } from "@mui/material";
 import PriceCardSection from "./PriceCardSection";
@@ -351,7 +348,7 @@ const PricingTab = () => {
     const fetchSubscriptionPlans = async () => {
       try {
         const response = await axios.get(
-          "http://api.saniiro.net/api/v1/price-comparison"
+          "http://dev.saniiro.net/api/v1/price-comparison"
         );
         const plans = response.data.Data;
         setSubscriptionPlans(plans);
@@ -366,7 +363,7 @@ const PricingTab = () => {
 
     fetchSubscriptionPlans();
   }, []);
-console.log("subscriptionPlans", subscriptionPlans);
+  console.log("subscriptionPlans", subscriptionPlans);
   return (
     <>
       <Box

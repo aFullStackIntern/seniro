@@ -31,7 +31,7 @@ const CommentForm = ({ BlogId }) => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://api.saniiro.net/api/v1/feedback/reply",
+        "http://dev.saniiro.net/api/v1/feedback/reply",
         formData
       );
       if (response.data.Code === 1000) {

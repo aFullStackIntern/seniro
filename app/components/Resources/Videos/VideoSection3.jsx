@@ -319,7 +319,7 @@ const VideoSection3 = () => {
   const router = useRouter();
 
   // useEffect(() => {
-  //   fetch("http://api.saniiro.net/api/v1/videos")
+  //   fetch("http://dev.saniiro.net/api/v1/videos")
   //     .then((response) => response.json())
   //     .then((data) => {
   //       setVideos(data.Data.VideoResources);

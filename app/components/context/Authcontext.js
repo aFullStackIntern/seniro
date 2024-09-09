@@ -91,7 +91,7 @@ export const DataProvider = ({ children }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://api.saniiro.net/api/v1/videos")
+    fetch("http://dev.saniiro.net/api/v1/videos")
       .then((response) => response.json())
       .then((data) => {
         setVideos(data?.Data?.VideoResources);

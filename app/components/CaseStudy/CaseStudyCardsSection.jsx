@@ -387,7 +387,7 @@ const TestimonialsCardsSection = () => {
     const fetchReviews = async () => {
       try {
         const response = await axios.get(
-          "http://api.saniiro.net/api/v1/case-study"
+          "http://dev.saniiro.net/api/v1/case-study"
         );
         setReviews(response.data.Data); // Assuming the response data is an array of reviews
       } catch (error) {

@@ -956,7 +956,7 @@ import gifBox3 from "./assets/giftbox3.png";
 import CareerGallery from "./CareerGallery";
 import mapPin from "./assets/map-pin 3.png";
 import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import Gallery from "../../../Partner/parts/Gallery";
 import axios from "axios";
@@ -1012,8 +1012,8 @@ const Features = [
 ];
 
 const JobDescription = () => {
-  const router = useRouter();
-  const { Slug } = router.query;
+  const params = useParams();
+  const Slug = params.slug;
   console.log("Slug", Slug);
   const [jobDetails, setJobDetails] = useState({});
 
@@ -1021,7 +1021,7 @@ const JobDescription = () => {
     const fetchJobDetails = async () => {
       try {
         const response = await axios.get(
-          `http://api.saniiro.net/api/v1/career/${Slug}`
+          `http://dev.saniiro.net/api/v1/career/${Slug}`
         );
         setJobDetails(response.data.Data);
       } catch (error) {

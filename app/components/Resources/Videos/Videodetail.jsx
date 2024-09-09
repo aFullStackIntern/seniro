@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Stack, Typography, Box } from "@mui/material";
 import Footer from "../../utils/Footer";
 import Nav from "../../Navbar/Nav";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 
 const VideoDetails = () => {
-  const router = useRouter();
-  const { slug } = router.query;
+  const params = useParams();
+  const Slug = params.slug;
   const [video, setVideo] = useState(null);
 
   useEffect(() => {
-    fetch(`http://api.saniiro.net/api/v1/videos/${slug}`)
+    fetch(`http://dev.saniiro.net/api/v1/videos/${slug}`)
       .then((response) => response.json())
       .then((data) => {
         setVideo(data.Data);

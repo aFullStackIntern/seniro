@@ -160,7 +160,7 @@
 //   const fetchJobs = async (pageNumber = 1) => {
 //     try {
 //       const response = await axios.get(
-//         "http://api.saniiro.net/api/v1/career",
+//         "http://dev.saniiro.net/api/v1/career",
 //         {
 //           params: {
 //             SearchTerm: "",
@@ -329,7 +329,7 @@ const JobSection = ({ selectedDepartmentId, Country }) => {
 
   const fetchJobs = async (pageNumber = 1) => {
     try {
-      const response = await axios.get("http://api.saniiro.net/api/v1/career", {
+      const response = await axios.get("http://dev.saniiro.net/api/v1/career", {
         params: {
           SearchTerm: Country ? Country : "", // Use the country name
           PageNumber: pageNumber,

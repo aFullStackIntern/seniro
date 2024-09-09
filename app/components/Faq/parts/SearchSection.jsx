@@ -8,14 +8,14 @@ const SearchSection = ({ setQuestions }) => {
   const [searchValue, setSearchValue] = useState("");
 
   async function fetchQuestions() {
-    const url = "http://api.saniiro.net/api/v1/faq";
+    const url = "http://dev.saniiro.net/api/v1/faq";
 
     const { data } = await axios.get(url, {
       params: {
         SearchTerm: searchValue,
       },
     });
-    // console.log(data.Data.FrequentAskQuestions);
+    console.log(data.Data.FrequentAskQuestions);
     setQuestions(data.Data.FrequentAskQuestions);
   }
 

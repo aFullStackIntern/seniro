@@ -6,15 +6,17 @@ import VideoCard1 from "./parts/VideoCard1";
 import videoImg from "../../assets/Rectangle 4301.png";
 import Footer from "../../utils/Footer";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 
 const PlayVideo = () => {
-  const router = useRouter();
-  const { slug } = router.query;
+  const params = useParams();
+  const { slug } = params;
+  console.log(params);
+  console.log(slug);
   const [video, setVideo] = useState(null);
 
   useEffect(() => {
-    fetch(`http://api.saniiro.net/api/v1/videos/${slug}`)
+    fetch(`http://dev.saniiro.net/api/v1/videos/${slug}`)
       .then((response) => response.json())
       .then((data) => {
         setVideo(data.Data);

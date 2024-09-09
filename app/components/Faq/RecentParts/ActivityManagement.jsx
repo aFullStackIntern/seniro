@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 const fetchFAQs = async () => {
   try {
-    const response = await axios.get("http://api.saniiro.net/api/v1/faq");
+    const response = await axios.get("http://dev.saniiro.net/api/v1/faq");
     const faqs = response.data.Data.FrequentAskQuestions;
     const popularPosts = response.data.Data.PopularFaqs;
     const RecentFaqs = response.data.Data.RecentFaqs;

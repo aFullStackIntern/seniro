@@ -48,7 +48,7 @@ const BlogFeed = () => {
   const fetchBlogs = async () => {
     try {
       const { data } = await axios.get(
-        `http://api.saniiro.net/api/v1/blog/?slug=${slug}`
+        `http://dev.saniiro.net/api/v1/blog/?slug=${slug}`
       );
       setTags(transformTags(data.Data.Tags));
       setBlogs(data.Data.Blogs);
