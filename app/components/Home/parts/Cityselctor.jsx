@@ -134,8 +134,8 @@ const CitySelector = ({
             </option>
           ))}
         </select>
-        {errors.CountryId && (
-          <Typography color="error">{errors.CountryId}</Typography>
+        {errors?.CountryId && (
+          <Typography color="error">{errors?.CountryId}</Typography>
         )}
 
         <select
@@ -146,15 +146,15 @@ const CitySelector = ({
           className="input-city"
         >
           <option value="">Select State</option>
-          {states.map((state) => (
+          {states?.map((state) => (
             <option key={state.Id} value={state.Name}>
               {state.Name}
             </option>
           ))}
         </select>
       </Stack>
-      {errors.StateId && (
-        <Typography color="error">{errors.StateId}</Typography>
+      {errors?.StateId && (
+        <Typography color="error">{errors?.StateId}</Typography>
       )}
     </>
   );

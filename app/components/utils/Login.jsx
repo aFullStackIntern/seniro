@@ -11,6 +11,7 @@ import Google from "../assets/google.png";
 import LinkedIn from "../assets/linkedIn.png";
 import Button from "./Button";
 import Link from "next/link";
+import Image from "next/image";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);

@@ -1,5 +1,7 @@
+"use client";
+
 import { Stack, IconButton, Typography, Box } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PersonIcon from "@mui/icons-material/Person";
 import PhoneNumberInput from "../Home/parts/nm";
 import EmailIcon from "@mui/icons-material/Email";
@@ -21,6 +23,14 @@ import { Image } from "@mui/icons-material";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [countries, setCountries] = useState([]);
+  useEffect(() => {
+    const fetchCountries = async () => {
+      const response = await axios.get("http://dev.saniiro.net/api/v1/country");
+      setCountries(response.data.Data || []);
+    };
+    fetchCountries();
+  }, []);
   const textStyle = {
     fontWeight: "bold",
     fontFamily: "Work Sans",
@@ -402,7 +412,7 @@ const Signup = () => {
                 />
               </Stack>
 
-              <CitySelector />
+              <CitySelector countries={countries} />
 
               <Typography
                 // color={"white"}
