@@ -155,7 +155,7 @@ const NewPart = () => {
                     sx={{
                       position: "relative",
                       width: { xl: "24%", lg: "14%", sm: "20%", xs: "22%" },
-                      height: "18vh",
+                      height: { smm: "18vh", xs: "6vh" },
                     }}
                   >
                     <Image
@@ -186,7 +186,7 @@ const NewPart = () => {
                     sx={{
                       position: "relative",
                       width: { xl: "27%", sm: "42%", lg: "30%" },
-                      height: "18vh",
+                      height: { smm: "18vh", xs: "6vh" },
                     }}
                   >
                     <a href={d.link} target="_blank" rel="noopener noreferrer">
