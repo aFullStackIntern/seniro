@@ -662,8 +662,7 @@ const NavLight = () => {
             }}
           >
             <AccordionSummary expandIcon={<ArrowDropDownIcon />}>
-              <Typography>
-                {" "}
+              <Box>
                 <Link href="/Features" className="navlink-link">
                   <Box
                     display={"flex"}
@@ -684,7 +683,7 @@ const NavLight = () => {
                     </Typography>
                   </Box>
                 </Link>
-              </Typography>
+              </Box>
             </AccordionSummary>
             <AccordionDetails>
               <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
@@ -720,8 +719,7 @@ const NavLight = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>
-                {" "}
+              <Box>
                 <Link href="/Solutions" className="navlink-link">
                   <Box
                     display={"flex"}
@@ -742,7 +740,7 @@ const NavLight = () => {
                     </Typography>
                   </Box>
                 </Link>
-              </Typography>
+              </Box>
             </AccordionSummary>
             <AccordionDetails>
               <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
@@ -780,8 +778,7 @@ const NavLight = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>
-                {" "}
+              <Box>
                 <Link href="/Resources" className="navlink-link">
                   <Box
                     display={"flex"}
@@ -802,7 +799,7 @@ const NavLight = () => {
                     </Typography>
                   </Box>
                 </Link>
-              </Typography>
+              </Box>
             </AccordionSummary>
             <AccordionDetails>
               <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
@@ -851,8 +848,7 @@ const NavLight = () => {
             }}
           >
             <AccordionSummary aria-controls="panel2-content" id="panel2-header">
-              <Typography>
-                {" "}
+              <Box>
                 <Link href="/Pricing" className="navlink-link">
                   <Box
                     display={"flex"}
@@ -873,7 +869,7 @@ const NavLight = () => {
                     </Typography>
                   </Box>
                 </Link>
-              </Typography>
+              </Box>
             </AccordionSummary>
           </Accordion>
           <Stack alignItems={"center"} margin={"10px auto"}>

@@ -206,7 +206,7 @@ const Footer = () => {
             <Typography color={"white"} fontWeight={"bold"} fontSize={"25px"}>
               Company
             </Typography>
-            <Typography>
+            <Box>
               <ul
                 style={{
                   display: "flex",
@@ -214,23 +214,29 @@ const Footer = () => {
                   flexDirection: "column",
                 }}
               >
-                {list1.map((d) => (
-                  <Link
-                    href={`${d.to}`}
+                {list1.map((d, i) => (
+                  <li
+                    key={i}
+                    className="list-item"
                     style={{ color: "lightgray", textDecoration: "none" }}
-                    onClick={() => window.scrollTo(0, 0)}
                   >
-                    <li className="list-item">{d.item}</li>
-                  </Link>
+                    <Link
+                      href={`${d.to}`}
+                      style={{ color: "lightgray", textDecoration: "none" }}
+                      onClick={() => window.scrollTo(0, 0)}
+                    >
+                      {d.item}
+                    </Link>
+                  </li>
                 ))}
               </ul>
-            </Typography>
+            </Box>
           </Stack>
           <Stack>
             <Typography color={"white"} fontWeight={"bold"} fontSize={"25px"}>
               Resources
             </Typography>
-            <Typography color={"lightgray"}>
+            <Box color={"lightgray"}>
               <ul
                 style={{
                   display: "flex",
@@ -238,24 +244,30 @@ const Footer = () => {
                   flexDirection: "column",
                 }}
               >
-                {list2.map((d) => (
-                  <Link
-                    // className="Footer-new"
-                    href={`${d.to}`}
+                {list2.map((d, i) => (
+                  <li
+                    key={i}
+                    className="list-item"
                     style={{ color: "lightgray", textDecoration: "none" }}
-                    onClick={() => window.scrollTo(0, 0)}
                   >
-                    <li className="list-item">{d.item}</li>
-                  </Link>
+                    <Link
+                      // className="Footer-new"
+                      href={`${d.to}`}
+                      style={{ color: "lightgray", textDecoration: "none" }}
+                      onClick={() => window.scrollTo(0, 0)}
+                    >
+                      {d.item}
+                    </Link>
+                  </li>
                 ))}
               </ul>
-            </Typography>
+            </Box>
           </Stack>
           <Stack>
             <Typography color={"white"} fontWeight={"bold"} fontSize={"25px"}>
               Customers
             </Typography>
-            <Typography color={"lightgray"}>
+            <Box color={"lightgray"}>
               <ul
                 style={{
                   display: "flex",
@@ -263,29 +275,41 @@ const Footer = () => {
                   flexDirection: "column",
                 }}
               >
-                <Link
-                  href="/Resources/CaseStudy"
+                <li
+                  className="list-item"
                   style={{ color: "lightgray", textDecoration: "none" }}
-                  onClick={() => window.scrollTo(0, 0)}
                 >
-                  <li className="list-item">Case studies</li>
-                </Link>
-                <Link
-                  href="/Resources/Testimonials"
+                  <Link
+                    href="/Resources/CaseStudy"
+                    onClick={() => window.scrollTo(0, 0)}
+                    style={{ color: "lightgray", textDecoration: "none" }}
+                  >
+                    Case studies
+                  </Link>
+                </li>
+                <li
                   style={{ color: "lightgray", textDecoration: "none" }}
-                  onClick={() => window.scrollTo(0, 0)}
+                  className="list-item"
                 >
-                  <li className="list-item">Testimonials</li>
-                </Link>
-                <Link
-                  href="/Resources/BecomeAPartner"
-                  style={{ color: "lightgray", textDecoration: "none" }}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  <li className="list-item">Become A Partner</li>
-                </Link>
+                  <Link
+                    href="/Resources/Testimonials"
+                    style={{ color: "lightgray", textDecoration: "none" }}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Testimonials
+                  </Link>
+                </li>
+                <li className="list-item">
+                  <Link
+                    href="/Resources/BecomeAPartner"
+                    style={{ color: "lightgray", textDecoration: "none" }}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Become A Partner
+                  </Link>
+                </li>
               </ul>
-            </Typography>
+            </Box>
             <Stack gap={2}>
               <Typography
                 color={"white"}
@@ -336,8 +360,9 @@ const Footer = () => {
           justifyContent={"Center"}
           gap={5}
         >
-          {list4.map((d) => (
+          {list4.map((d, i) => (
             <Link
+              key={i}
               href={`${d.to}`}
               style={{ color: "lightgray", textDecoration: "none" }}
               onClick={() => window.scrollTo(0, 0)}
@@ -501,8 +526,7 @@ const Footer = () => {
                       />
                     }
                   >
-                    <Typography>
-                      {" "}
+                    <Box>
                       <Box
                         display={"flex"}
                         justifyContent="center"
@@ -522,7 +546,7 @@ const Footer = () => {
                           Company
                         </Typography>
                       </Box>
-                    </Typography>
+                    </Box>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Stack
@@ -530,21 +554,24 @@ const Footer = () => {
                       gap={1}
                       marginLeft={"20px"}
                     >
-                      {list1.map((d) => (
-                        <Link
-                          href={`${d.to}`}
-                          style={{ color: "white", textDecoration: "none" }}
-                          onClick={() => window.scrollTo(0, 0)}
+                      {list1.map((d, i) => (
+                        <li
+                          key={i}
+                          style={{
+                            fontFamily: "Work Sans",
+                            color: "white",
+                            textDecoration: "none",
+                          }}
+                          className="list-item"
                         >
-                          <li
-                            style={{
-                              fontFamily: "Work Sans",
-                            }}
-                            className="list-item"
+                          <Link
+                            href={`${d.to}`}
+                            style={{ color: "white", textDecoration: "none" }}
+                            onClick={() => window.scrollTo(0, 0)}
                           >
                             {d.item}
-                          </li>
-                        </Link>
+                          </Link>
+                        </li>
                       ))}
                     </Stack>
                   </AccordionDetails>
@@ -566,7 +593,7 @@ const Footer = () => {
                       />
                     }
                   >
-                    <Typography>
+                    <Box>
                       <Box
                         display={"flex"}
                         justifyContent="center"
@@ -586,7 +613,7 @@ const Footer = () => {
                           Features
                         </Typography>
                       </Box>
-                    </Typography>
+                    </Box>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Stack
@@ -594,21 +621,24 @@ const Footer = () => {
                       gap={1}
                       marginLeft={"20px"}
                     >
-                      {list2.map((d) => (
-                        <Link
-                          href={`${d.to}`}
-                          style={{ color: "white", textDecoration: "none" }}
-                          onClick={() => window.scrollTo(0, 0)}
+                      {list2.map((d, i) => (
+                        <li
+                          key={i}
+                          style={{
+                            fontFamily: "Work Sans",
+                            color: "white",
+                            textDecoration: "none",
+                          }}
+                          className="list-item"
                         >
-                          <li
-                            style={{
-                              fontFamily: "Work Sans",
-                            }}
-                            className="list-item"
+                          <Link
+                            href={`${d.to}`}
+                            style={{ color: "white", textDecoration: "none" }}
+                            onClick={() => window.scrollTo(0, 0)}
                           >
                             {d.item}
-                          </li>
-                        </Link>
+                          </Link>
+                        </li>
                       ))}
                     </Stack>
                   </AccordionDetails>
@@ -630,8 +660,7 @@ const Footer = () => {
                       />
                     }
                   >
-                    <Typography>
-                      {" "}
+                    <Box>
                       <Box
                         display={"flex"}
                         justifyContent="center"
@@ -651,7 +680,7 @@ const Footer = () => {
                           Customers
                         </Typography>
                       </Box>
-                    </Typography>
+                    </Box>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Stack
@@ -659,21 +688,24 @@ const Footer = () => {
                       gap={1}
                       marginLeft={"20px"}
                     >
-                      {list3.map((d) => (
-                        <Link
-                          href={`${d.to}`}
-                          style={{ color: "white", textDecoration: "none" }}
-                          onClick={() => window.scrollTo(0, 0)}
+                      {list3.map((d, i) => (
+                        <li
+                          key={i}
+                          style={{
+                            fontFamily: "Work Sans",
+                            color: "white",
+                            textDecoration: "none",
+                          }}
+                          className="list-item"
                         >
-                          <li
-                            style={{
-                              fontFamily: "Work Sans",
-                            }}
-                            className="list-item"
+                          <Link
+                            href={`${d.to}`}
+                            style={{ color: "white", textDecoration: "none" }}
+                            onClick={() => window.scrollTo(0, 0)}
                           >
                             {d.item}
-                          </li>
-                        </Link>
+                          </Link>
+                        </li>
                       ))}
                     </Stack>
                   </AccordionDetails>
@@ -758,8 +790,9 @@ const Footer = () => {
                 },
               }}
             >
-              {list4.map((d) => (
+              {list4.map((d, i) => (
                 <Link
+                  key={i}
                   href={`${d.to}`}
                   style={{ color: "lightgray", textDecoration: "none" }}
                   onClick={() => window.scrollTo(0, 0)}

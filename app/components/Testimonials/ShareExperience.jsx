@@ -5,9 +5,10 @@ import Lock from "../assets/Lock.png";
 import Button from "../utils/Button";
 import Link from "next/link";
 
-import CitySelector from "./../Home/parts/Cityselctor";
+// import CitySelector from "./../Home/parts/Cityselctor";
 import "./Experience.css";
 import Image from "next/image";
+
 const ShareExperience = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -227,7 +228,7 @@ const ShareExperience = () => {
                       placeholder="Company Name"
                     />
                   </Stack>
-                  <CitySelector />
+                  {/* <CitySelector /> */}
                   <Stack width={"90%"}>
                     <input
                       style={{
@@ -481,7 +482,7 @@ const ShareExperience = () => {
                       placeholder="Company Name"
                     />
                   </Stack>
-                  <CitySelector />
+                  {/* <CitySelector /> */}
                   <Stack width={"90%"}>
                     <input
                       style={{

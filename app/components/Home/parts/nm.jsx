@@ -3,8 +3,10 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { Stack, Typography } from "@mui/material";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+import { usePathname } from "next/navigation";
 
 const PhoneNumberInput = ({ formData, setFormData, errors }) => {
+  const pathname = usePathname();
   const handlePhoneChange = (value, country) => {
     setFormData((prev) => ({
       ...prev,
@@ -12,7 +14,7 @@ const PhoneNumberInput = ({ formData, setFormData, errors }) => {
       PhoneNumber: value, // Store the full number with the dial code
     }));
   };
-  const isContactUsPage = window.location.href.endsWith("/Contact-us");
+  const isContactUsPage = pathname.endsWith("/Contact-us");
   return (
     <Stack
       style={{ position: "relative" }}

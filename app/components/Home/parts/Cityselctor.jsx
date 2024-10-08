@@ -91,11 +91,11 @@ import { Stack, Typography } from "@mui/material";
 
 const CitySelector = ({
   handleCountryChange,
-  countries,
+  countries = [],
   selectedState,
   handleStateChange,
   selectedCountry,
-  states,
+  states = [],
   errors,
 }) => {
   return (

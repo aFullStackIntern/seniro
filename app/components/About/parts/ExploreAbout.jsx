@@ -187,7 +187,6 @@ const ExploreAbout = () => {
                         style={{
                           width: "350px",
                           height: "350px",
-                          objectFit: "cover",
                         }}
                       />
                       <Box
